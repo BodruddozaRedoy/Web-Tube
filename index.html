@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.11/dist/full.min.css"
       rel="stylesheet"
@@ -19,7 +20,7 @@
             </div>
             <div class="search">
                 <label class="input input-bordered flex items-center gap-2">
-                    <input type="text" class="grow" placeholder="Search" />
+                    <input id="search-input" type="text" class="grow" placeholder="Search" />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 16 16"
@@ -33,7 +34,7 @@
                   </label>
             </div>
             <div class="sort">
-                <button id="button" class="btn">SORT</button>
+                <button id="button" class="btn ">SORT</button>
             </div>
         </nav>
         <div id="category" class="flex justify-center items-center py-2">
@@ -46,6 +47,20 @@
             
         </section>
     </main>
+
+    <!-- Open the modal using ID.showModal() method -->
+<button  class="btn hidden" onclick="customModal.showModal()">open modal</button>
+<dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="modal-content"></div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
     <script src="scripts/video.js"></script>
   </body>
 </html>
